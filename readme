@@ -1,0 +1,16 @@
+# 训练启动命令
+# python run_classifier.py --task_name=news --do_train=true --do_eval=true --data_dir=data --vocab_file=./pretrain_model/chinese_L-12_H-768_A-12/vocab.txt --bert_config_file=./pretrain_model/chinese_L-12_H-768_A-12/bert_config.json --init_checkpoint=./pretrain_model/chinese_L-12_H-768_A-12/bert_model.ckpt --max_seq_length=300 --train_batch_size=4 --learning_rate=2e-5 --num_train_epochs=3.0 --output_dir=./model_output/
+
+python run_classifier.py
+    --task_name=news    # 任务名
+    --do_train=true   # 是否训练
+    --do_eval=true   # 是否评估
+    --data_dir=data   # 数据存放位置
+    --vocab_file=./pretrain_model/chinese_L-12_H-768_A-12/vocab.txt  # 词表文件位置
+    --bert_config_file=./pretrain_model/chinese_L-12_H-768_A-12/bert_config.json   # bert模型配置参数
+    --init_checkpoint=./pretrain_model/chinese_L-12_H-768_A-12/bert_model.ckpt   # 已预训练好的Bert模型参数
+    --max_seq_length=300   # 输入最多300个词
+    --train_batch_size=4   # batch size
+    --learning_rate=2e-5    # 学习率
+    --num_train_epochs=3.0    # 训练轮次
+    --output_dir=./model_output/   # 模型输出结果
